@@ -36,7 +36,7 @@ jobs:
         run: yarn build
 
       - name: Installing Surge
-        run: npm i -g surge
+        run: sudo npm i -g surge
 
       - name: deploying on surge app
         run: surge ./build http://react-point.surge.sh/ --token ${{secrets.SURGE_TOKEN}}
